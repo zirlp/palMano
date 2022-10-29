@@ -4,7 +4,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-}
+  }
 
 /*===================MENU==========================*/
 #menu a, button {
@@ -19,6 +19,7 @@ body {
 /*===================SLIDER DE IMAGENES=========================*/
 .carousel-inner {
   max-height: 33rem !important;
+  padding: 10rem;
 }
 
 /*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
@@ -48,7 +49,7 @@ body {
   padding-top: 150px;
 }
 
-/*===========================SECCION EQUIPO MIAMI==================================*/
+/*===========================SECCION==================================*/
 #numeros-local {
   margin: 0 !important;
   padding: 0 !important;
@@ -164,8 +165,12 @@ footer p {
     width: 100% !important;
   }
   #servicios-fila-1 {
-    width: 100% !important;
+    width: 100% !important;  
   }
+#servicios-fila-3 {
+    width: 100% !important;
+}
+
   .icono-wrap {
     flex-wrap: wrap !important;
     justify-content: center !important;
