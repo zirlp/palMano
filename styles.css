@@ -18,8 +18,8 @@ body {
 
 /*===================SLIDER DE IMAGENES=========================*/
 .carousel-inner {
-  max-height: 33rem !important;
-  padding: 10rem;
+  max-height: 35rem !important;
+  
 }
 
 /*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
@@ -170,7 +170,6 @@ footer p {
 #servicios-fila-3 {
     width: 100% !important;
 }
-
   .icono-wrap {
     flex-wrap: wrap !important;
     justify-content: center !important;
