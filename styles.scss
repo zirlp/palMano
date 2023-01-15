@@ -7,6 +7,11 @@ $primary: #1b4e4b;
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    transition: ease .5s all; 
+    &.dark { 
+        background:#000;
+        color:white 
+    }
 }
 
 
@@ -22,6 +27,20 @@ body {
      color:#3f3f3f;
      
  }
+
+nav { 
+    transition: ease .5ss all; 
+    body.dark & {
+		background:#282828;
+		box-shadow: rgb(89, 120, 100);
+		a {
+			color: white;
+			&:hover {
+				color: green;
+			}
+		}
+    }
+}
 /*===================SLIDER DE IMAGENES=========================*/
 
 .carousel-inner {
@@ -45,6 +64,11 @@ body {
     display:flex;
     justify-content: center; 
     padding-bottom: 300px; 
+
+    body.dark & {
+        background-color: #000;
+        color: white;
+    }
 }
 
 .mapa {
@@ -61,7 +85,7 @@ body {
 }
 
 
-/*===========================SECCION EQUIPO MIAMI==================================*/
+/*===========================SECCION EQUIPO==================================*/
 #numeros-local{
     margin:0 !important;
     padding:0 !important;
@@ -121,6 +145,16 @@ body {
 footer {
     background: #1b4e4b;
     min-height: 100px;;
+    body.dark & {
+		background:#3f3f3f;
+		box-shadow: white;
+		a {
+			color: white;
+			&:hover {
+				color: green;
+			}
+		}}
+    
 }
 footer p{
     color:#f3f3f3;
@@ -131,6 +165,8 @@ footer p{
     padding: 0 8px;
     color:#f3f3f3;
 }
+
+
 
 /*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
 
@@ -202,3 +238,45 @@ footer p{
 }
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+
+/*=========================darkmode================================*/
+
+.switch {
+	background: #343D5B;
+	border-radius: 1000px;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	outline: none;
+	&::after {
+		content: "";
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		background: #F1F1F1;
+		top: 0;
+		left: 0;
+		right: unset;
+		border-radius: 100px;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+	}
+	&.active {
+		background: orange;
+		color: #000;
+		&::after {
+			right: 0;
+			left: unset;
+		}
+	}
+	span {
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		display: block;
+		background: none;
+		color: #fff;
+	}
+}

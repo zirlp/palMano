@@ -4,7 +4,12 @@
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
-  }
+  transition: ease 0.5s all;
+}
+body.dark {
+  background: #000;
+  color: white;
+}
 
 /*===================MENU==========================*/
 #menu a, button {
@@ -16,10 +21,23 @@ body {
   color: #3f3f3f;
 }
 
+nav {
+  transition: ease 0.5ss all;
+}
+body.dark nav {
+  background: #282828;
+  box-shadow: rgb(89, 120, 100);
+}
+body.dark nav a {
+  color: white;
+}
+body.dark nav a:hover {
+  color: green;
+}
+
 /*===================SLIDER DE IMAGENES=========================*/
 .carousel-inner {
-  max-height: 35rem !important;
-  
+  max-height: 33rem !important;
 }
 
 /*===================SECCION NUESTRO EQUIPO IMAGEN==========================*/
@@ -36,6 +54,10 @@ body {
   justify-content: center;
   padding-bottom: 300px;
 }
+body.dark #local {
+  background-color: #000;
+  color: white;
+}
 
 .mapa {
   background: url(https://i.blogs.es/b4dd5c/maps/1366_2000.png);
@@ -49,7 +71,7 @@ body {
   padding-top: 150px;
 }
 
-/*===========================SECCION==================================*/
+/*===========================SECCION EQUIPO==================================*/
 #numeros-local {
   margin: 0 !important;
   padding: 0 !important;
@@ -104,6 +126,16 @@ body {
 footer {
   background: #1b4e4b;
   min-height: 100px;
+}
+body.dark footer {
+  background: #3f3f3f;
+  box-shadow: white;
+}
+body.dark footer a {
+  color: white;
+}
+body.dark footer a:hover {
+  color: green;
 }
 
 footer p {
@@ -165,11 +197,8 @@ footer p {
     width: 100% !important;
   }
   #servicios-fila-1 {
-    width: 100% !important;  
-  }
-#servicios-fila-3 {
     width: 100% !important;
-}
+  }
   .icono-wrap {
     flex-wrap: wrap !important;
     justify-content: center !important;
@@ -11111,4 +11140,44 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+/*=========================darkmode================================*/
+.switch {
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background: orange;
+  color: #000;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */
