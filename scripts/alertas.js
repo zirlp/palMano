@@ -32,7 +32,7 @@
 
     if (estado) {
         Swal.fire({
-            title: "Seleccionaste ${estado}", 
+            title: `Seleccionaste ${estado}`, 
         });
     }
 })()
